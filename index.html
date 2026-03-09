@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development 1 - Donald Mwana</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development 1, Donald Mwana, Web Frontend Development">
+    <meta name="author" content="Donald Mwana">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" id="logo">
+        <span>Donald Mwana</span>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page Title -->
+        <h1>Home</h1>
+
+        <!-- Course Overview Section -->
+        <section>
+            <h2>Course Overview</h2>
+            <p>Welcome to my page! I'm Donald Mwana, a Congolese living in Pretoria, South Africa. I'm 27 years old, open-minded, and a born-again believer in Christ Jesus. I am excited to learn web development and build projects to improve my skills.</p>
+        </section>
+
+        <!-- Completed Courses Section -->
+        <section>
+            <h2>Completed Courses</h2>
+
+            <!-- Dynamic Course Cards -->
+            <div id="course-cards"></div>
+
+            <!-- Filter Buttons -->
+            <div class="buttons">
+                <button id="show-all">All Courses</button>
+                <button id="show-wdd130">WDD130</button>
+                <button id="show-wdd131">WDD131</button>
+                <button id="show-wdd231">WDD231</button>
+            </div>
+
+            <!-- Total Credits -->
+            <p>Total Credits: <span id="total-credits"></span></p>
+        </section>
+
+        <!-- About Me Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>I enjoy learning new technologies, creating web projects, and growing as a software developer. My goal is to become a full-stack developer while sharing my knowledge with others.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://github.com/DonaldMwana" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/donald-mwana-3a472223a" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <!-- Copyright -->
+        <div>
+            &copy; <span id="currentyear"></span> Donald Mwana, South Africa
+        </div>
+
+        <!-- Last Modified Date -->
+        <div>
+            Last Modified: <span id="lastModified"></span>
+        </div>
+    </footer>
+</body>
+</html>

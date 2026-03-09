@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    nav {
+        display: block !important;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .course {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}

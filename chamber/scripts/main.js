@@ -1,7 +1,5 @@
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
-const lastMod=document.getElementById("last-mod");
-if(lastMod){
-lastMod.textContent=document.lastModified;
-}
+document.getElementById("last-mod").textContent =
+document.lastModified;

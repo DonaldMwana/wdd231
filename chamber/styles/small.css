@@ -1,5 +1,5 @@
-body{
-font-family: Roboto, Arial, sans-serif;
+body {
+font-family: 'Roboto', Arial, sans-serif;
 margin:0;
 background:#f9f9f9;
 color:#333;
@@ -10,21 +10,27 @@ header{
 background:#004080;
 color:white;
 text-align:center;
-padding:1em;
+padding:1rem;
+}
+
+.site-name{
+font-size:1.8rem;
+font-weight:700;
+margin:0;
 }
 
 nav ul{
+list-style:none;
 display:flex;
 justify-content:center;
 gap:1rem;
-list-style:none;
 padding:0;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
 }
 
 /* HERO */
@@ -35,6 +41,7 @@ text-align:center;
 
 .hero img{
 width:100%;
+height:auto;
 }
 
 .hero-text{
@@ -42,31 +49,36 @@ position:absolute;
 top:40%;
 left:50%;
 transform:translate(-50%,-50%);
+background:rgba(0,0,0,0.6);
 color:white;
-}
-
-.cta{
-background:#ff6600;
-padding:10px 20px;
-color:white;
-text-decoration:none;
-border-radius:5px;
-}
-
-/* SECTIONS */
-.events,.weather,.spotlights{
-background:white;
-margin:1em;
-padding:1em;
+padding:1rem;
 border-radius:6px;
 }
 
-/* MEMBER CARD */
-.member-card{
-border:1px solid #ccc;
-padding:1em;
-margin:1em 0;
+/* CTA BUTTON (contrast fixed) */
+.cta{
+display:inline-block;
+margin-top:10px;
+background:#cc5200;
+color:white;
+padding:.7rem 1.2rem;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+section{
+padding:1rem;
+margin:1rem;
 background:white;
+border-radius:6px;
+}
+
+/* SPOTLIGHT CARDS */
+.spotlight-card{
+border:1px solid #ccc;
+padding:1rem;
+margin-bottom:1rem;
 text-align:center;
 }
 
@@ -75,5 +87,6 @@ footer{
 background:#004080;
 color:white;
 text-align:center;
-padding:1em;
+padding:1rem;
+font-size:.9rem;
 }

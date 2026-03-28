@@ -1,24 +1,29 @@
-const container=document.getElementById("spotlight-container");
+const url = "data/members.json";
 
-async function loadSpotlights(){
+async function getSpotlights(){
 
-const response=await fetch("data/members.json");
-const members=await response.json();
+const response = await fetch(url);
+const data = await response.json();
 
-const qualified=members.filter(m =>
-m.membership==="Gold" || m.membership==="Silver"
+const members = data.members.filter(
+m => m.membership === "Gold" || m.membership === "Silver"
 );
 
-const random=qualified.sort(()=>0.5-Math.random()).slice(0,3);
+const shuffled = members.sort(() => 0.5 - Math.random());
 
-random.forEach(member=>{
+const selected = shuffled.slice(0,3);
 
-const card=document.createElement("div");
-card.classList.add("member-card");
+const container =
+document.getElementById("spotlight-container");
 
-card.innerHTML=`
+selected.forEach(member => {
+
+const card = document.createElement("div");
+card.classList.add("spotlight-card");
+
+card.innerHTML = `
 <h3>${member.name}</h3>
-<img src="${member.logo}" alt="${member.name}">
+<img src="${member.logo}" alt="${member.name} logo">
 <p>${member.phone}</p>
 <p>${member.address}</p>
 <a href="${member.website}" target="_blank">Visit Website</a>
@@ -29,4 +34,4 @@ container.appendChild(card);
 });
 }
 
-loadSpotlights();
+getSpotlights();

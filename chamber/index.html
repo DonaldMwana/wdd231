@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Your City Chamber of Commerce Home Page">
+<meta name="description"
+content="Welcome to the Your City Chamber of Commerce website supporting local businesses, community events, networking opportunities, and economic growth.">
 <meta name="author" content="Donald Mwana">
 
-<title>Your City Chamber | Home</title>
+<title>Your City Chamber of Commerce | Home Page</title>
 
+<!-- Favicon -->
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Your City Chamber of Commerce Home Page">
+<meta property="og:description"
+content="Discover local businesses, upcoming events, and opportunities to grow with the Your City Chamber of Commerce community.">
+<meta property="og:image"
+content="https://donaldmwana.github.io/wdd231/chamber/images/hero.jpg">
+<meta property="og:url"
+content="https://donaldmwana.github.io/wdd231/chamber/index.html">
+<meta property="og:type" content="website">
+
+<!-- CSS -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
-<link rel="icon" href="images/favicon.ico">
+
+<!-- JavaScript -->
+<script src="scripts/main.js" defer></script>
+<script src="scripts/weather.js" defer></script>
+<script src="scripts/spotlight.js" defer></script>
+
 </head>
 
 <body>
 
 <header>
-<h1>Your City Chamber of Commerce</h1>
+<p class="site-name">Your City Chamber of Commerce</p>
 
 <nav>
 <ul>
@@ -33,36 +59,36 @@
 
 <main>
 
-<!-- HERO -->
+<h1>Your City Chamber of Commerce</h1>
+
+<!-- HERO SECTION -->
 <section class="hero">
-<img src="images/hero.jpg" alt="City businesses">
+<img src="images/hero.jpg" alt="City businesses" loading="lazy">
+
 <div class="hero-text">
-<h2>Supporting Local Business Growth</h2>
-<a href="join.html" class="cta">Join the Chamber</a>
+<h2>Connecting Businesses & Community</h2>
+<a class="cta" href="join.html">Join the Chamber</a>
 </div>
 </section>
 
 <!-- EVENTS -->
 <section class="events">
 <h2>Current Events</h2>
-<ul>
-<li>Business Networking – April 10</li>
-<li>Startup Workshop – April 18</li>
-<li>Community Market – April 25</li>
-</ul>
+<p>Business Networking Breakfast – April 10</p>
+<p>Local Market Expo – April 18</p>
 </section>
 
 <!-- WEATHER -->
 <section class="weather">
 <h2>Weather</h2>
-<p>Temperature: <span id="temp"></span>°C</p>
-<p>Condition: <span id="description"></span></p>
+<p>Temperature: <span id="current-temp"></span></p>
+<p>Description: <span id="weather-desc"></span></p>
 
 <h3>3-Day Forecast</h3>
 <div id="forecast"></div>
 </section>
 
-<!-- SPOTLIGHTS -->
+<!-- SPOTLIGHT -->
 <section class="spotlights">
 <h2>Member Spotlights</h2>
 <div id="spotlight-container"></div>
@@ -71,14 +97,10 @@
 </main>
 
 <footer>
-<p>Contact: Donald Mwana | WDD231</p>
-<p>&copy; <span id="year"></span></p>
+<p>Contact: Donald Mwana | WDD 231</p>
+<p>&copy; <span id="year"></span> Your City Chamber of Commerce</p>
 <p>Last Modified: <span id="last-mod"></span></p>
 </footer>
-
-<script src="scripts/main.js" defer></script>
-<script src="scripts/weather.js" defer></script>
-<script src="scripts/spotlight.js" defer></script>
 
 </body>
 </html>

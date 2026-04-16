@@ -1,12 +1,12 @@
-export function showModal(p) {
-  const modal = document.querySelector('#modal');
+export function showModal(place) {
+const modal = document.querySelector('#modal');
 
-  modal.innerHTML = `
-    <h2>${p.name}</h2>
-    <img src="${p.image}" style="width:100%">
-    <p>${p.description}</p>
-    <button onclick="this.closest('dialog').close()">Close</button>
-  `;
+modal.innerHTML = `
+<h2>${place.name}</h2>
+<p>${place.location}</p>
+<p>${place.category}</p>
+<button onclick="modal.close()">Close</button>
+`;
 
-  modal.showModal();
+modal.showModal();
 }
